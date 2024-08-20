@@ -29,3 +29,10 @@
   padding: 10px;
   letter-spacing: 8px;
 }
+
+.section-one 
+{
+  background-color: red;
+  width: 70%;
+  text-align: center;
+}
