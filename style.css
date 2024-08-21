@@ -1,38 +1,116 @@
-@charset "UTF8";
+@charset "UTF-8";
 
-*
-{
-    padding: 0px;
-    margin: 0px;
+/* Reset e Fontes Globais */
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
 }
 
-.img1-parallax 
-{
-    background: gray url(img/img1.jpg) no-repeat center center fixed;
+/* Variáveis para cores e espaçamentos */
+:root {
+    --main-bg-color: gray;
+    --text-color-light: white;
+    --text-color-dark: grey;
+    --section-padding: 50px 80px;
+    --letter-spacing: 8px;
+}
+
+/* Estilos para as Imagens de Parallax */
+.img1-parallax,
+.img2-parallax,
+.img3-parallax {
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.img1-parallax {
+    background-image: url('img/img1.jpg');
     height: 100vh;
     opacity: 0.7;
 }
 
-.img1-text 
-{
-  background-color: #000;  
-  color: white;  
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-55%, -50%);
-  text-align: center;
-  width: 500px;
-  padding: 10px;
-  letter-spacing: 8px;
+.img2-parallax,
+.img3-parallax {
+    height: 40vh;
 }
 
-.section-one 
-{
-  background-color: red;
-  width: 70%;
-  text-align: center;
+.img2-parallax {
+    background-image: url('img/img2.jpg');
+}
+
+.img3-parallax {
+    background-image: url('img/img3.jpg');
+}
+
+/* Estilos de Texto nas Imagens */
+.img1-text,
+.img2-text,
+.img3-text {
+    color: var(--text-color-light);
+    letter-spacing: var(--letter-spacing);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.img1-text {
+    left: 50%;
+    transform: translate(-55%, -50%);
+    background-color: #000;
+    width: 500px;
+    padding: 10px;
+}
+
+.img2-text,
+.img3-text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+/* Seções */
+.section,
+.section-one {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-one-text,
+.section-text {
+    padding: var(--section-padding);
+    line-height: 1.5em;
+}
+
+.section-one-text h3,
+.section-text h3 {
+    font-size: 1.7em;
+    padding-bottom: 20px;
+}
+
+.section-one-text p,
+.section-text p {
+    font-size: 1em;
+}
+
+.section-one-text {
+    color: var(--text-color-dark);
+}
+
+.section {
+    background-color: #282e34;
+}
+
+.section-text {
+    color: #ddd;
+    line-height: 1.7em;
 }
